@@ -1,6 +1,6 @@
-import { useState } from 'react';
+import { useState } from 'react'
 import brainLogo from './assets/brain.png'
-import Form from './components/Form';
+import QuestionsForm from './components/QuestionsForm'
 import './index.css'
 
 function App() {
@@ -20,10 +20,12 @@ function App() {
             alt="CHTE logo"
             className="w-16 h-16"
           />
-          <h1 className='text-2xl font-bold text-center pt-4 md:text-3xl'>Cuestionario de Hábitos y Técnicas de Estudio</h1>
+          {start
+            ? <></>
+            : <h1 className='text-2xl font-bold text-center pt-4 md:text-3xl'>Cuestionario de Hábitos y Técnicas de Estudio</h1>}
         </header>
         {start 
-          ? <Form />              
+          ? <QuestionsForm />              
           : <section className='w-11/12 md:w-3/4 text-justify text-gray-500 flex flex-col items-center pt-4'>
               <p className='py-2'>
                 A continuación encontrarás unas preguntas que se refieren a tu forma de estudiar. Léelas con detenimiento y seleccionando la respuesta que concuerde con tu comportamiento.
@@ -35,7 +37,7 @@ function App() {
                 Debes ser sincero y contestar a todas las preguntas, pues estos datos servirán para conocer cuál es tu situación en el estudio personal y mejorar, si es necesario, aquellos aspectos que lo requieran. Si no has comprendido algo puedes preguntarlo ahora.
               </p>
               <button 
-                className='bg-blue-500 hover:bg-blue-700 text-white font-bold my-4 py-3 px-4 rounded-full'
+                className='bg-blue-600 hover:bg-blue-800 text-white font-bold my-4 py-3 px-4 rounded-full'
                 onClick={handleStart}
               >
                 Inicia tu cuestionario

@@ -1,4 +1,8 @@
-export const preguntas = [
+export const questions = [
+  '¿Cuál es tu nombre?',
+  '¿Cuál es tu edad?',
+  '¿Cuál es tu genero?',
+  '¿Cuál es tu programa educativo?',
   '¿Tienes claras las razones por las que estudias?',
   '¿Sueles cambiar con cierta frecuencia el lugar donde estudias en tu casa?',
   '¿Procuras estudiar en aquellas horas en que te encuentras en mejores condiciones para aprender?',
@@ -55,11 +59,4 @@ export const preguntas = [
   '¿Aprovechas algún momento del fin de semana para repasar aquellos temas que te han quedado más flojos?',
   'Si te sobra tiempo, ¿entregas el examen inmediatamente sin repasar de nuevo las respuestas?',
   '¿Sueles indicar el nombre de todos aquellos materiales (libros, enciclopedias, revistas, etc.) que has utilizado en el trabajo? ',
-]
-
-export const info = [
-  'Nombre',
-  'Edad',
-  'Genero',
-  'Programa educativo'
 ]
