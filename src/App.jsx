@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { motion } from "framer-motion"
 import brainLogo from './assets/brain.png'
 import QuestionsForm from './components/QuestionsForm'
 import './index.css'
@@ -13,7 +14,12 @@ function App() {
 
   return (
     <div className='font-sans bg-slate-100 text-gray-900 lg:landscape:p-0 md:text-lg'>
-      <main className='mx-auto max-w-5xl min-h-screen flex flex-col items-center justify-center lg:landscape:p-0'>
+      <motion.main
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.25 }}
+       className='mx-auto max-w-5xl min-h-screen flex flex-col items-center justify-center lg:landscape:p-0'
+      >
         <header className='w-11/12 md:w-3/4 text-justify flex flex-col items-center pt-4 select-none'>
           <img 
             src={brainLogo}
@@ -55,7 +61,7 @@ function App() {
               </footer>
             </section> 
         }  
-      </main>
+      </motion.main>
     </div>
   )
 }

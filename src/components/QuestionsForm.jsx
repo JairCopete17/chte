@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { motion } from 'framer-motion'
 import { questions } from '../utils/questions'
 
 export default function QuestionsForm() {
@@ -160,7 +161,10 @@ export default function QuestionsForm() {
   }
 
   return (
-    <form 
+    <motion.form
+      initial={{ x: -1000 }}
+      animate={{ x: 0 }}
+      transition={{ duration: 0.5 }}
       onSubmit={handleSubmit}
       className='flex flex-col items-center pt-2 md:gap-4 w-11/12 md:w-3/4'
     > 
@@ -179,34 +183,40 @@ export default function QuestionsForm() {
       <article className='inline-flex pt-4'>
         {/* Only show the "Anterior" button if the current index is not 0 */}
         {currentIndex > 0 && (
-          <button
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
             type="button"
             onClick={handlePrevious}
             className='bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-l'
           >
             Anterior
-          </button>
+          </motion.button>
         )}
         {/* Only show the "Siguiente pregunta" button if the current index is not the last question */}
         {currentIndex < questions.length - 1 && (
-          <button
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
             type="button"
             onClick={handleNext}
             className='bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-l'
           >
             Siguiente
-          </button>
+          </motion.button>
         )}
         {/* Only show the "Terminar" submit button if the current index is the last question */}
         {currentIndex == questions.length - 1 && (
-          <button 
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
             type="submit"
             className='bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-l'
           >
             Terminar
-          </button>
+          </motion.button>
         )}
       </article>
-    </form>
+    </motion.form>
   )
 }
