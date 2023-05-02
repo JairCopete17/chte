@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { questions } from '../utils/questions'
 
-export default function QuestionsForm() {
+export default function QuestionsForm({ setFinal }) {
   const [formData, setFormData] = useState({})
   const [currentIndex, setCurrentIndex] = useState(0)
   const [alertMessage, setAlertMessage] = useState(false)
@@ -10,7 +10,9 @@ export default function QuestionsForm() {
   // Create an event handler for the form submission
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log('Form data:', formData)
+    setFinal(true)
+    console.log('Form data:', JSON.stringify(formData))
+    localStorage.setItem('formData', JSON.stringify(formData))
     // TODO: Save the form data into a database
   }
 
