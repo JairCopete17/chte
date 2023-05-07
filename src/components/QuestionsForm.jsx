@@ -108,33 +108,43 @@ export default function QuestionsForm({ setFinal }) {
         <article className='flex flex-row space-x-4'>
           <input
             type="radio"
-            value="C1"
+            value="A1"
             name={currentQuestion}
             checked={formData[currentQuestion] === "C1"}
             onChange={(e) => setFormData({ ...formData, [currentQuestion]: e.target.value })}
             required
           />
-          <p>Ciencias de la educación - Grupo C1</p>
+          <p>Grupo A1</p>
         </article>
         <article className='flex flex-row space-x-4'>
           <input
             type="radio"
-            value="C2"
+            value="B1"
             name={currentQuestion}
             checked={formData[currentQuestion] === "C2"}
             onChange={(e) => setFormData({ ...formData, [currentQuestion]: e.target.value })}
           />
-          <p>Ciencias de la educación - Grupo C2</p>
+          <p>Grupo B1</p>
         </article>
         <article className='flex flex-row space-x-4'>
           <input
             type="radio"
-            value="C3"
+            value="C1"
             name={currentQuestion}
             checked={formData[currentQuestion] === "C3"}
             onChange={(e) => setFormData({ ...formData, [currentQuestion]: e.target.value })}
           />
-          <p>Ciencias de la educación - Grupo C3</p>
+          <p>Grupo C1</p>
+        </article>
+        <article className='flex flex-row space-x-4'>
+          <input
+            type="radio"
+            value="D1"
+            name={currentQuestion}
+            checked={formData[currentQuestion] === "C3"}
+            onChange={(e) => setFormData({ ...formData, [currentQuestion]: e.target.value })}
+          />
+          <p>Grupo D1</p>
         </article>
       </section>
     )
