@@ -13,7 +13,6 @@ export default function QuestionsForm({ setFinal }) {
     setFinal(true)
     console.log('Form data:', JSON.stringify(formData))
     localStorage.setItem('formData', JSON.stringify(formData))
-    // TODO: Save the form data into a database
   }
 
   // Create an event handler for the "Next" button
@@ -70,6 +69,8 @@ export default function QuestionsForm({ setFinal }) {
     inputField = (
       <input
         type="number"
+        min={0}
+        max={100}
         name={currentQuestion}
         value={formData[currentQuestion] || ""}
         onChange={(e) => setFormData({ ...formData, [currentQuestion]: e.target.value })}

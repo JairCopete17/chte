@@ -1,3 +1,5 @@
+import { useEffect } from 'react'
+import { supabase } from '../utils/supabaseClient'
 import { 
   BarChart,
   Bar,
@@ -85,48 +87,71 @@ export default function ProfileBuild({ formData }) {
 
   // Create an array of objects with the data to be displayed
   const data = [{
-    nombre: questions[0],
-    edad: questions[1],
-    genero: questions[2],
-    grupo: questions[3],
+    nombre: responses[0],
+    edad: responses[1],
+    genero: responses[2],
+    grupo: responses[3],
     resultado: [
       {
         title: "AC",
         name: "Actitud general ante el estudio",
-        score: Math.round((ACscore / ACquestionsToCheck.length)*100 * 100) / 100,
+        score: (ACscore/ACquestionsToCheck.length)*100,
       },
       {
         title: "LU",
         name: "Lugar de estudio",
-        score: Math.round((LUscore / LUquestionsToCheck.length)*100 * 100) / 100,
+        score: (LUscore/LUquestionsToCheck.length)*100,
       },
       {
         title: "ES",
         name: "Estado físico",
-        score: Math.round((ESscore / ESquestionsToCheck.length)*100 * 100) / 100,
+        score: (ESscore/ESquestionsToCheck.length)*100,
       },
       {
         title: "PL",
         name: "Plan de trabajo",
-        score: Math.round((PLscore / PLquestionsToCheck.length)*100 * 100) / 100,
+        score: (PLscore/PLquestionsToCheck.length)*100,
       },
       {
         title: "TE",
         name: "Técnicas de estudio",
-        score: Math.round((TEscore / TEquestionsToCheck.length)*100 * 100) / 100,
+        score: (TEscore/TEquestionsToCheck.length)*100,
       },
       {
         title: "EX",
         name: "Exámenes y ejercicios",
-        score: Math.round((EXscore / EXquestionsToCheck.length)*100 * 100) / 100,
+        score: (EXscore/EXquestionsToCheck.length)*100,
       },
       {
         title: "TR",
         name: "Trabajos",
-        score: Math.round((TRscore / TRquestionsToCheck.length)*100 * 100) / 100,
+        score: (TRscore/TRquestionsToCheck.length)*100,
       }
     ]
   }]
+
+  useEffect(() => {
+    async function insertData() {
+      const profile = {
+        nombre: data[0].nombre,
+        edad: data[0].edad,
+        genero: data[0].genero,
+        grupo: data[0].grupo,
+        ac_result: data[0].resultado[0].score,
+        lu_result: data[0].resultado[1].score,
+        es_result: data[0].resultado[2].score,
+        pl_result: data[0].resultado[3].score,
+        te_result: data[0].resultado[4].score,
+        ex_result: data[0].resultado[5].score,
+        tr_result: data[0].resultado[6].score,
+      }
+  
+      let { error } = await supabase.from('entries').insert(profile)
+      if (error) alert(error.message)
+    }
+
+    insertData()
+  }, [])
 
   return (
     <>
