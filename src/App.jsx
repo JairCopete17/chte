@@ -22,7 +22,7 @@ function App() {
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.25 }}
-        className='mx-auto max-w-5xl min-h-screen flex flex-col items-center justify-center lg:landscape:p-0'
+        className='mx-auto max-w-5xl min-h-screen flex flex-col items-center justify-center'
       >
         <header className='w-11/12 md:w-3/4 text-justify flex flex-col items-center pt-4 select-none'>
           <img 

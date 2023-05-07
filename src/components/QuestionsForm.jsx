@@ -140,25 +140,35 @@ export default function QuestionsForm({ setFinal }) {
   } else {
     // Display a radio button group for the next questions
     inputField = (
-      <article className='flex flex-row pt-4 items-center gap-2'>
-        <input
-          type="radio"
-          value="Sí"
-          name={currentQuestion}
-          checked={formData[currentQuestion] === "Sí"}
-          onChange={(e) => setFormData({ ...formData, [currentQuestion]: e.target.value })}
-          required
-        />
-        <p>Sí</p>
-        <input
-          type="radio"
-          value="No"
-          name={currentQuestion}
-          checked={formData[currentQuestion] === "No"}
-          onChange={(e) => setFormData({ ...formData, [currentQuestion]: e.target.value })}
-        />
-        <p>No</p>
-      </article>
+      <section className='flex flex-row space-x-4'>
+        <article className='flex pl-4 items-center border border-gray-200 rounded hover:border-gray-500 hover:bg-slate-200'>
+          <input
+            type="radio"
+            value="Sí"
+            className='w-4 h-4 text-blue-600 bg-slate-500 border-gray-500 focus:ring-blue-500'
+            name={currentQuestion}
+            checked={formData[currentQuestion] === "Sí"}
+            onChange={(e) => setFormData({ ...formData, [currentQuestion]: e.target.value })}
+            required
+          />
+          <label className='w-16 py-4 ml-2 text-gray-900'>
+            Sí
+          </label>
+        </article>
+        <article className='flex pl-4 items-center border border-gray-200 rounded hover:border-gray-500 hover:bg-slate-200'>
+          <input
+            type="radio"
+            value="No"
+            className='w-4 h-4 text-blue-600 bg-slate-500 border-gray-500 focus:ring-blue-500'
+            name={currentQuestion}
+            checked={formData[currentQuestion] === "No"}
+            onChange={(e) => setFormData({ ...formData, [currentQuestion]: e.target.value })}
+          />
+          <label className='w-16 py-4 ml-2 text-gray-900'>
+            No
+          </label>
+        </article>
+      </section>
     )
   }
 
@@ -168,7 +178,7 @@ export default function QuestionsForm({ setFinal }) {
       animate={{ x: 0 }}
       transition={{ duration: 0.5 }}
       onSubmit={handleSubmit}
-      className='flex flex-col items-center pt-2 md:gap-4 w-11/12 md:w-3/4'
+      className='container mx-auto flex flex-col items-center pt-2 gap-4 w-11/12 md:w-3/4'
     > 
       {alertMessage && (
         <article 
@@ -202,7 +212,7 @@ export default function QuestionsForm({ setFinal }) {
             whileTap={{ scale: 0.9 }}
             type="button"
             onClick={handleNext}
-            className='bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-l'
+            className='bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-r'
           >
             Siguiente
           </motion.button>
