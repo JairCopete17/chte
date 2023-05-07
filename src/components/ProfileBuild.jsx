@@ -93,37 +93,37 @@ export default function ProfileBuild({ formData }) {
       {
         title: "AC",
         name: "Actitud general ante el estudio",
-        score: (ACscore / ACquestionsToCheck.length)*100,
+        score: Math.round((ACscore / ACquestionsToCheck.length)*100 * 100) / 100,
       },
       {
         title: "LU",
         name: "Lugar de estudio",
-        score: (LUscore / LUquestionsToCheck.length)*100,
+        score: Math.round((LUscore / LUquestionsToCheck.length)*100 * 100) / 100,
       },
       {
         title: "ES",
         name: "Estado físico",
-        score: (ESscore / ESquestionsToCheck.length)*100,
+        score: Math.round((ESscore / ESquestionsToCheck.length)*100 * 100) / 100,
       },
       {
         title: "PL",
         name: "Plan de trabajo",
-        score: (PLscore / PLquestionsToCheck.length)*100,
+        score: Math.round((PLscore / PLquestionsToCheck.length)*100 * 100) / 100,
       },
       {
         title: "TE",
         name: "Técnicas de estudio",
-        score: (TEscore / TEquestionsToCheck.length)*100,
+        score: Math.round((TEscore / TEquestionsToCheck.length)*100 * 100) / 100,
       },
       {
         title: "EX",
         name: "Exámenes y ejercicios",
-        score: (EXscore / EXquestionsToCheck.length)*100,
+        score: Math.round((EXscore / EXquestionsToCheck.length)*100 * 100) / 100,
       },
       {
         title: "TR",
         name: "Trabajos",
-        score: (TRscore / TRquestionsToCheck.length)*100,
+        score: Math.round((TRscore / TRquestionsToCheck.length)*100 * 100) / 100,
       }
     ]
   }]
