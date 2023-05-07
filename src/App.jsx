@@ -1,6 +1,6 @@
 import './index.css'
 import { useState } from 'react'
-import { motion } from "framer-motion"
+import { motion } from 'framer-motion'
 import brainLogo from './assets/brain.png'
 import QuestionsForm from './components/QuestionsForm'
 import WelcomePage from './components/WelcomePage'
@@ -30,18 +30,12 @@ function App() {
             alt="CHTE logo"
             className="w-16 h-16"
           />
-          {start
-            ? <></>
-            : <h1 className='text-2xl font-bold text-center pt-4 md:text-3xl'>
-                Cuestionario de Hábitos y Técnicas de Estudio
-              </h1>
-          }
         </header>
         {final
           ? <ResultsPage formData={formData} />
           : start 
             ? <QuestionsForm setFinal={setFinal} />              
-            : <WelcomePage handleStart={handleStart}/> 
+            : <WelcomePage handleStart={handleStart} /> 
         }  
       </motion.main>
     </div>
