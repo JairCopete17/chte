@@ -66,7 +66,7 @@ export default function ProfileBuild({ formData }) {
     else if (responses[questionNumber + offset] === "No" 
             && questions[questionNumber + offset] === questions[18 + offset]) ESscore++
     else if (responses[questionNumber + offset] === "Sí" 
-            && questions[questionNumber + offset] === questions[18 + offset]) ESscore--
+            && questions[questionNumber + offset] === questions[53 + offset]) ESscore--
     else if (responses[questionNumber + offset] === "No" 
             && questions[questionNumber + offset] === questions[53 + offset]) ESscore++
   })
@@ -80,7 +80,7 @@ export default function ProfileBuild({ formData }) {
     else if (responses[questionNumber + offset] === "Sí" 
             && questions[questionNumber + offset] === questions[48 + offset]) PLscore--  
     else if (responses[questionNumber + offset] === "No" 
-          && questions[questionNumber + offset] === questions[48 + offset]) PLscore++  
+            && questions[questionNumber + offset] === questions[48 + offset]) PLscore++  
   })
 
   TEquestionsToCheck.forEach(questionNumber => {
