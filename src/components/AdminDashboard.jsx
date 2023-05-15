@@ -71,7 +71,7 @@ export default function AdminDashboard() {
           alt="Ninja emoji"
           className="w-5 h-5 mr-3"
         />
-        Una página creada por Jair Copete.
+        Una página creada por Lambda.
       </footer>
     </section>
   )

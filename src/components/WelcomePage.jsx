@@ -42,7 +42,7 @@ export default function WelcomePage({ handleStart }) {
               alt="Ninja emoji"
               className="w-5 h-5 mr-3"
             />
-            Una página creada por Jair Copete.
+            Una página creada por Lambda.
           </footer>
         </section>
       : <AdminSignIn onClose={() => setShowModal(false)} />
