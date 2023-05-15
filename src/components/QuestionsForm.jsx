@@ -101,50 +101,43 @@ export default function QuestionsForm({ setFinal }) {
         <p>Mujer</p>
       </article>
     )
-  } else if (currentQuestion === "¿Cuál es tu programa educativo?") {
+  } else if (currentQuestion === "¿Cuál es tu facultad?") {
     // Display a radio button group for the educational program question
     inputField = (
-      <section className='flex flex-col pt-4 items-center gap-2'>
-        <article className='flex flex-row space-x-4'>
+      <section className='flex flex-col space-y-2'>
+        <article className='flex px-4 items-center border border-gray-200 rounded hover:border-gray-500 hover:bg-slate-200'>
           <input
             type="radio"
-            value="A1"
+            value="CE"
+            className='w-4 h-4 text-blue-600 bg-slate-500 border-gray-500'
             name={currentQuestion}
-            checked={formData[currentQuestion] === "C1"}
+            checked={formData[currentQuestion] === "CE"}
             onChange={(e) => setFormData({ ...formData, [currentQuestion]: e.target.value })}
             required
           />
-          <p>Grupo A1</p>
+          <label className='py-4 ml-2 text-gray-900'>Ciencias de la educación</label>
         </article>
-        <article className='flex flex-row space-x-4'>
+        <article className='flex px-4 items-center border border-gray-200 rounded hover:border-gray-500 hover:bg-slate-200'>
           <input
             type="radio"
-            value="B1"
+            value="CEA"
+            className='w-4 h-4 text-blue-600 bg-slate-500 border-gray-500'
             name={currentQuestion}
-            checked={formData[currentQuestion] === "C2"}
+            checked={formData[currentQuestion] === "CEA"}
             onChange={(e) => setFormData({ ...formData, [currentQuestion]: e.target.value })}
           />
-          <p>Grupo B1</p>
+          <label className='py-4 ml-2 text-gray-900'>Ciencias económicas y administrativas</label>
         </article>
-        <article className='flex flex-row space-x-4'>
+        <article className='flex px-4 items-center border border-gray-200 rounded hover:border-gray-500 hover:bg-slate-200'>
           <input
             type="radio"
-            value="C1"
+            value="I"
+            className='w-4 h-4 text-blue-600 bg-slate-500 border-gray-500'
             name={currentQuestion}
-            checked={formData[currentQuestion] === "C3"}
+            checked={formData[currentQuestion] === "I"}
             onChange={(e) => setFormData({ ...formData, [currentQuestion]: e.target.value })}
           />
-          <p>Grupo C1</p>
-        </article>
-        <article className='flex flex-row space-x-4'>
-          <input
-            type="radio"
-            value="D1"
-            name={currentQuestion}
-            checked={formData[currentQuestion] === "C3"}
-            onChange={(e) => setFormData({ ...formData, [currentQuestion]: e.target.value })}
-          />
-          <p>Grupo D1</p>
+          <label className='py-4 ml-2 text-gray-900'>Ingeniería</label>
         </article>
       </section>
     )

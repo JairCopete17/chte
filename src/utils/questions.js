@@ -2,7 +2,7 @@ export const questions = [
   '¿Cuál es tu nombre?',
   '¿Cuál es tu edad?',
   '¿Cuál es tu genero?',
-  '¿Cuál es tu programa educativo?',
+  '¿Cuál es tu facultad?',
   '¿Tienes claras las razones por las que estudias?',
   '¿Sueles cambiar con cierta frecuencia el lugar donde estudias en tu casa?',
   '¿Procuras estudiar en aquellas horas en que te encuentras en mejores condiciones para aprender?',
