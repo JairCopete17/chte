@@ -1,6 +1,7 @@
 import './index.css'
 import { useState } from 'react'
 import { motion } from 'framer-motion'
+import { Analytics } from '@vercel/analytics/react'
 import brainLogo from './assets/brain.png'
 import QuestionsForm from './components/QuestionsForm'
 import WelcomePage from './components/WelcomePage'
@@ -38,6 +39,7 @@ function App() {
             : <WelcomePage handleStart={handleStart} /> 
         }  
       </motion.main>
+      <Analytics />
     </div>
   )
 }
