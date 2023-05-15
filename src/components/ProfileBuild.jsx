@@ -33,82 +33,82 @@ export default function ProfileBuild({ formData }) {
   // Check each question and add or subtract points from the corresponding score
   ACquestionsToCheck.forEach(questionNumber => {
     if (responses[questionNumber + offset] === "Sí") ACscore++
-    else if (responses[questionNumber + offset] === "Sí" 
-            && questions[questionNumber + offset] === questions[15 + offset]) ACscore--
+    if (responses[questionNumber + offset] === "Sí" 
+      && questions[questionNumber + offset] === questions[15 + offset]) ACscore--
     else if (responses[questionNumber + offset] === "No" 
-            && questions[questionNumber + offset] === questions[15 + offset]) ACscore++
-    else if (responses[questionNumber + offset] === "Sí" 
-            && questions[questionNumber + offset] === questions[32 + offset]) ACscore--
+      && questions[questionNumber + offset] === questions[15 + offset]) ACscore++
+    if (responses[questionNumber + offset] === "Sí" 
+      && questions[questionNumber + offset] === questions[32 + offset]) ACscore--
     else if (responses[questionNumber + offset] === "No" 
-            && questions[questionNumber + offset] === questions[32 + offset]) ACscore++
+      && questions[questionNumber + offset] === questions[32 + offset]) ACscore++
   })
 
   LUquestionsToCheck.forEach(questionNumber => {
     if (responses[questionNumber + offset] === "Sí") LUscore++
-    else if (responses[questionNumber + offset] === "Sí" 
-            && questions[questionNumber + offset] === questions[2 + offset]) LUscore--
+    if (responses[questionNumber + offset] === "Sí" 
+      && questions[questionNumber + offset] === questions[2 + offset]) LUscore--
     else if (responses[questionNumber + offset] === "No" 
-            && questions[questionNumber + offset] === questions[2 + offset]) LUscore++
-    else if (responses[questionNumber + offset] === "Sí" 
-            && questions[questionNumber + offset] === questions[16 + offset]) LUscore--
+      && questions[questionNumber + offset] === questions[2 + offset]) LUscore++
+    if (responses[questionNumber + offset] === "Sí" 
+      && questions[questionNumber + offset] === questions[16 + offset]) LUscore--
     else if (responses[questionNumber + offset] === "No" 
-            && questions[questionNumber + offset] === questions[16 + offset]) LUscore++
-    else if (responses[questionNumber + offset] === "Sí" 
-            && questions[questionNumber + offset] === questions[43 + offset]) LUscore--
+      && questions[questionNumber + offset] === questions[16 + offset]) LUscore++
+    if (responses[questionNumber + offset] === "Sí" 
+      && questions[questionNumber + offset] === questions[43 + offset]) LUscore--
     else if (responses[questionNumber + offset] === "No" 
-            && questions[questionNumber + offset] === questions[43 + offset]) LUscore++
+      && questions[questionNumber + offset] === questions[43 + offset]) LUscore++
   })
 
   ESquestionsToCheck.forEach(questionNumber => {
     if (responses[questionNumber + offset] === "Sí") ESscore++
-    else if (responses[questionNumber + offset] === "Sí" 
-            && questions[questionNumber + offset] === questions[18 + offset]) ESscore--
+    if (responses[questionNumber + offset] === "Sí" 
+      && questions[questionNumber + offset] === questions[18 + offset]) ESscore--
     else if (responses[questionNumber + offset] === "No" 
-            && questions[questionNumber + offset] === questions[18 + offset]) ESscore++
-    else if (responses[questionNumber + offset] === "Sí" 
-            && questions[questionNumber + offset] === questions[53 + offset]) ESscore--
+      && questions[questionNumber + offset] === questions[18 + offset]) ESscore++
+    if (responses[questionNumber + offset] === "Sí" 
+      && questions[questionNumber + offset] === questions[53 + offset]) ESscore--
     else if (responses[questionNumber + offset] === "No" 
-            && questions[questionNumber + offset] === questions[53 + offset]) ESscore++
+      && questions[questionNumber + offset] === questions[53 + offset]) ESscore++
   })
 
   PLquestionsToCheck.forEach(questionNumber => {
     if (responses[questionNumber + offset] === "Sí") PLscore++
-    else if (responses[questionNumber + offset] === "Sí"
-            && questions[questionNumber + offset] === questions[40 + offset]) PLscore--
+    if (responses[questionNumber + offset] === "Sí"
+      && questions[questionNumber + offset] === questions[40 + offset]) PLscore--
     else if (responses[questionNumber + offset] === "No" 
-            && questions[questionNumber + offset] === questions[40 + offset]) PLscore++
-    else if (responses[questionNumber + offset] === "Sí" 
-            && questions[questionNumber + offset] === questions[48 + offset]) PLscore--  
+      && questions[questionNumber + offset] === questions[40 + offset]) PLscore++
+    if (responses[questionNumber + offset] === "Sí" 
+      && questions[questionNumber + offset] === questions[48 + offset]) PLscore--  
     else if (responses[questionNumber + offset] === "No" 
-            && questions[questionNumber + offset] === questions[48 + offset]) PLscore++  
+      && questions[questionNumber + offset] === questions[48 + offset]) PLscore++  
   })
 
   TEquestionsToCheck.forEach(questionNumber => {
     if (responses[questionNumber + offset] === "Sí") TEscore++
-    else if (responses[questionNumber + offset] === "Sí" 
-            && questions[questionNumber + offset] === questions[17 + offset]) TEscore--
+    if (responses[questionNumber + offset] === "Sí" 
+      && questions[questionNumber + offset] === questions[17 + offset]) TEscore--
     else if (responses[questionNumber + offset] === "No"
-            && questions[questionNumber + offset] === questions[17 + offset]) TEscore++
+      && questions[questionNumber + offset] === questions[17 + offset]) TEscore++
   })
 
   EXquestionsToCheck.forEach(questionNumber => {
     if (responses[questionNumber + offset] === "Sí") EXscore++
-    else if (responses[questionNumber + offset] === "Sí" 
-            && questions[questionNumber + offset] === questions[55 + offset]) EXscore--
+    if (responses[questionNumber + offset] === "Sí" 
+      && questions[questionNumber + offset] === questions[55 + offset]) EXscore--
     else if (responses[questionNumber + offset] === "No" 
-            && questions[questionNumber + offset] === questions[55 + offset]) EXscore++
+      && questions[questionNumber + offset] === questions[55 + offset]) EXscore++
   })
 
   TRquestionsToCheck.forEach(questionNumber => {
     if (responses[questionNumber + offset] === "Sí") TRscore++
-    else if (responses[questionNumber + offset] === "Sí" 
-            && questions[questionNumber + offset] === questions[39 + offset]) TRscore--
+    if (responses[questionNumber + offset] === "Sí" 
+      && questions[questionNumber + offset] === questions[39 + offset]) TRscore--
     else if (responses[questionNumber + offset] === "No" 
-            && questions[questionNumber + offset] === questions[39 + offset]) TRscore++
-    else if (responses[questionNumber + offset] === "Sí" 
-            && questions[questionNumber + offset] === questions[50 + offset]) TRscore--
+      && questions[questionNumber + offset] === questions[39 + offset]) TRscore++
+    if (responses[questionNumber + offset] === "Sí" 
+      && questions[questionNumber + offset] === questions[50 + offset]) TRscore--
     else if (responses[questionNumber + offset] === "No" 
-            && questions[questionNumber + offset] === questions[50 + offset]) TRscore++
+      && questions[questionNumber + offset] === questions[50 + offset]) TRscore++
   })
 
   // Create an array of objects with the data to be displayed
