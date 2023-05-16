@@ -153,7 +153,8 @@ export default function ProfileBuild({ formData }) {
         name: "Trabajos",
         score: (TRscore/TRquestionsToCheck.length)*100,
       }
-    ]
+    ],
+    global: ((ACscore + LUscore + ESscore + PLscore + TEscore + EXscore + TRscore)/56)*100,
   }]
 
   useEffect(() => {
@@ -201,6 +202,14 @@ export default function ProfileBuild({ formData }) {
         <Tooltip />
         <Bar dataKey="score" fill="#f6c0d3" />
       </BarChart>
+      {data.global >= 90
+        ? <p className='py-2 font-semibold text-center'>Tu puntuación global es igual a {data.global}%, lo que significa que eres buen estudiante, sigue así.</p>
+        : data.global >= 50 && data.global < 90
+          ? <p className='py-2 font-semibold text-center'>Tu puntuación global es igual a {data.global}%, lo que significa que eres un estudiante aceptable, puedes mejorar en algun aspecto.</p>
+          : data.global >= 11 && data.global < 50
+            ? <p className='py-2 font-semibold text-center'>Tu puntuación global es igual a {data.global}%, lo que significa que eres un estudiante con muchos aspectos a mejorar.</p>
+            : <p className='py-2 font-semibold text-center'>Tu puntuación global es igual a {data.global}%, lo que significa que eres un estudiante que no sabe estudiar.</p>
+      }
     </>
   )
 }
