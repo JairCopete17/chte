@@ -171,6 +171,7 @@ export default function ProfileBuild({ formData }) {
         te_result: data[0].resultado[4].score,
         ex_result: data[0].resultado[5].score,
         tr_result: data[0].resultado[6].score,
+        global: data[0].global
       }
   
       let { error } = await supabase.from('entries').insert(profile)
